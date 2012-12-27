@@ -1,0 +1,20 @@
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html;
+						 charset=utf-8">
+</head>
+<body>
+<?
+function CheckDir($s,$step) // $s - папка, которую сканировать, $step - глубина вложения этой папки (сколько отступов делать)
+{
+    echo str_repeat('-',$step).basename($s)."\r\n"; // показываем текущую папку с отступами
+    $a = glob($s.'/*',GLOB_ONLYDIR); // ищем вложенные папки
+    foreach($a as $v)
+    {
+        CheckDir($v,$step+1); // для каждой вложенной папки рекурсивно вызываем эту же функцию с увеличенным отступом
+    }
+}
+CheckDir('D:/MyDir',0);
+?>
+</body>
+</html>

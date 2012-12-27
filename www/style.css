@@ -1,0 +1,159 @@
+*
+{
+	margin: 0;
+	padding: 0;
+}
+html {
+	height: 100%;
+}
+header, nav, section, article, aside, footer {
+	display: block;
+}
+body {
+	font: 12px/18px Arial, Tahoma, Verdana, sans-serif;
+	height: 100%;
+}
+
+a: {
+	color: orange;
+	text-decoration: none;
+}
+a:link {
+	color: orange;
+}
+a:visited {
+	color: yellow;
+}
+a:hover {
+	color: yellow;
+}
+a:active {
+	color: red;
+}
+p {
+	margin: 0 0 18px
+}
+img {
+	border: none;
+}
+
+input {
+	vertical-align: middle;
+}
+#wrapper {
+	width: 100%;
+	min-width: 1000px;
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+}
+
+
+/* Header
+-----------------------------------------------------------------------------*/
+#header {
+	height: 10%;
+	width: 100%;
+	background: #b74b4b;
+	position: fixed;
+	background-image: url(http://test/img/panel.png);
+}
+
+header img {
+	clear: left;
+}
+
+header li {
+	display: inline;		
+}
+
+header a {
+    position: relative; 
+    top: 45px;
+    right: 5px;
+    text-decoration: none;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    white-space: nowrap;
+}
+
+/* Middle
+-----------------------------------------------------------------------------*/
+#middle {
+	top: 100px;
+	width: 100%;
+	padding: 0 0 100px;
+	height: 75%;
+	position: absolute;
+	overflow: auto;
+	background:#990000;
+	color:#FFFFFF;	
+	background-image: url(http://test/img/creationlife.jpg);
+	background-position: center;
+	bottom right;
+	right bottom;
+}
+#middle:after {
+	content: '.';
+	display: block;
+	clear: both;
+	visibility: hidden;
+	height: 0;
+}
+#container {
+	width: 100%;
+	float: left;
+	clear: both;
+}
+#loading{
+	visibility:hidden;
+}
+#pageContent {
+	clear: none;
+	padding: 0 250px 0 250px;
+}
+
+
+/* Sidebar Left
+-----------------------------------------------------------------------------*/
+#sideLeft {
+	top: 100px;
+	float: left;
+	width: 245px;
+	margin-left: -100%;
+	height: 100%;
+}
+sideLeft li {
+	display: inline;		
+}
+sideLeft a {
+    position: relative; 
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+
+/* Sidebar Right
+-----------------------------------------------------------------------------*/
+#sideRight {
+	float: left;
+	margin-right: -3px;
+	width: 245px;
+	margin-left: -245px;
+	position: relative;
+	height: 100%;
+}
+
+
+/* Footer
+-----------------------------------------------------------------------------*/
+
+#footer {
+position:fixed;
+bottom:0px;
+text-align:center;
+background:#990000;
+color:#FFFFFF;
+width:100%;
+height: 5%;
+}
