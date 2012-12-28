@@ -5,6 +5,7 @@
 </head>
 <body>
 <?
+<<<<<<< HEAD
 function CheckDir($s,$step) // $s - папка, которую сканировать, $step - глубина вложения этой папки (сколько отступов делать)
 {
     echo str_repeat('-',$step).basename($s)."\r\n"; // показываем текущую папку с отступами
@@ -15,6 +16,27 @@ function CheckDir($s,$step) // $s - папка, которую сканиров�
     }
 }
 CheckDir('D:/MyDir',0);
+=======
+function read_dir($dir) {
+   $array = array();
+   $d = dir($dir);
+   while (false !== ($entry = $d->read())) {
+       if($entry!='.' && $entry!='..') {
+           $entry = $dir.'/'.$entry;
+           if(is_dir($entry)) {
+              // $array[] = $entry;
+               $array = array_merge($array, read_dir($entry));
+           } else {
+               $array[] = $entry;
+	   }
+       }
+   }
+   $d->close();
+   return $array;
+}
+
+foreach (read_dir("/home/andrei/Web/admin-it-mix.it/www", true, "/.*\.pdf/i") as $file) echo ("<a href = \"".$file."\">".basename($file)."</a>\n");
+>>>>>>> cb1b6b1e5dfc83691d8dd0a927e188e824c4047d
 ?>
 </body>
 </html>

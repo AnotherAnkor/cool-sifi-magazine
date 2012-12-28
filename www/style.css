@@ -52,7 +52,7 @@ input {
 /* Header
 -----------------------------------------------------------------------------*/
 #header {
-	height: 10%;
+	height: 40%;
 	width: 100%;
 	background: #b74b4b;
 	position: fixed;
@@ -80,7 +80,7 @@ header a {
 /* Middle
 -----------------------------------------------------------------------------*/
 #middle {
-	top: 100px;
+	top: 150px;
 	width: 100%;
 	padding: 0 0 100px;
 	height: 75%;
